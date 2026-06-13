@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 
-	"wink"
+	"github.com/clowndaddy/wink"
 )
 
 func runTransform(args []string) error {

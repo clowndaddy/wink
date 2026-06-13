@@ -35,8 +35,8 @@ import (
 	goSort "sort"
 	"strings"
 
-	"wink/internal/pathutil"
-	"wink/internal/wildcards"
+	"github.com/clowndaddy/wink/internal/pathutil"
+	"github.com/clowndaddy/wink/internal/wildcards"
 )
 
 // Apply runs the default transform.

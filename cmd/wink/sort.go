@@ -7,7 +7,7 @@ import (
 	"io"
 	"os"
 
-	"wink/sorter"
+	"github.com/clowndaddy/wink/sorter"
 )
 
 func runSort(args []string) error {

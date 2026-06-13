@@ -25,12 +25,12 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"wink/cardinality"
-	"wink/defaultop"
-	"wink/modify"
-	"wink/remove"
-	"wink/shift"
-	"wink/sorter"
+	"github.com/clowndaddy/wink/cardinality"
+	"github.com/clowndaddy/wink/defaultop"
+	"github.com/clowndaddy/wink/modify"
+	"github.com/clowndaddy/wink/remove"
+	"github.com/clowndaddy/wink/shift"
+	"github.com/clowndaddy/wink/sorter"
 )
 
 // Operation represents one entry in a Jolt chainr spec array.

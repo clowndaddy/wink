@@ -18,7 +18,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"wink"
+	"github.com/clowndaddy/wink"
 )
 
 // ─── helpers ────────────────────────────────────────────────────────────────
