@@ -1,0 +1,62 @@
+[
+  {
+    "operation": "cardinality",
+    "comment": "Ensure items is always a list even if only one item",
+    "spec": {
+      "items": "MANY"
+    }
+  },
+  {
+    "operation": "shift",
+    "comment": "Restructure for the fulfillment API schema",
+    "spec": {
+      "orderId":    "fulfillment.referenceId",
+      "orderDate":  "fulfillment.placedOn",
+      "customer": {
+        "firstName":    "fulfillment.recipient.first",
+        "lastName":     "fulfillment.recipient.last",
+        "emailAddress": "fulfillment.recipient.email",
+        "loyaltyTier":  "fulfillment.recipient.tier"
+      },
+      "items": {
+        "*": {
+          "sku":         "fulfillment.lineItems[&1].itemCode",
+          "productName": "fulfillment.lineItems[&1].description",
+          "qty":         "fulfillment.lineItems[&1].quantity",
+          "unitPrice":   "fulfillment.lineItems[&1].price"
+        }
+      },
+      "shippingAddress": {
+        "street": "fulfillment.destination.line1",
+        "city":   "fulfillment.destination.city",
+        "state":  "fulfillment.destination.region",
+        "zip":    "fulfillment.destination.postalCode"
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite",
+    "comment": "Normalize email to lowercase",
+    "spec": {
+      "fulfillment": {
+        "recipient": {
+          "email": "=toLower(@(1,email))"
+        }
+      }
+    }
+  },
+  {
+    "operation": "default",
+    "comment": "Apply defaults for missing fields",
+    "spec": {
+      "fulfillment": {
+        "status":   "PENDING",
+        "priority": "STANDARD"
+      }
+    }
+  },
+  {
+    "operation": "sort",
+    "comment": "Sort keys for deterministic output"
+  }
+]

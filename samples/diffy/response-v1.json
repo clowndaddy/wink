@@ -1,0 +1,15 @@
+{
+  "user": {
+    "id": 42,
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "role": "admin",
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "language": "en"
+    }
+  },
+  "permissions": ["read", "write", "delete"],
+  "lastLogin": "2024-03-14T09:30:00Z"
+}

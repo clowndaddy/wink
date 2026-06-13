@@ -1,0 +1,43 @@
+[
+  {
+    "operation": "cardinality",
+    "comment": "Normalize inconsistent cardinality from the legacy API",
+    "spec": {
+      "products": {
+        "*": {
+          "tag":            "MANY",
+          "ratings": {
+            "score": "MANY"
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite",
+    "comment": "Type-coerce string fields and compute derived values",
+    "spec": {
+      "products": {
+        "*": {
+          "price":   "=toDouble(@(1,price))",
+          "inStock": "=toBoolean(@(1,inStock))",
+          "ratings": {
+            "avgScore": "=avg(@(1,score))"
+          }
+        }
+      }
+    }
+  },
+  {
+    "operation": "remove",
+    "comment": "Strip internal and legacy fields",
+    "spec": {
+      "source":           "",
+      "~schemaVersion":   "",
+      "generatedAt":      ""
+    }
+  },
+  {
+    "operation": "sort"
+  }
+]

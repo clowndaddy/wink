@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": "P001",
+      "name": "Widget Pro",
+      "tag": "electronics",
+      "price": "49.99",
+      "inStock": "true",
+      "ratings": {
+        "score": [4, 5, 3, 5, 4],
+        "reviewCount": 5
+      }
+    },
+    {
+      "id": "P002",
+      "name": "Gadget Lite",
+      "tag": ["electronics", "portable"],
+      "price": "19.99",
+      "inStock": "false",
+      "ratings": {
+        "score": 3,
+        "reviewCount": 1
+      }
+    }
+  ],
+  "~schemaVersion": "1.2",
+  "generatedAt": "2024-03-15T10:00:00Z",
+  "source": "legacy-catalog-v1"
+}

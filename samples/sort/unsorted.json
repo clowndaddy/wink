@@ -1,0 +1,27 @@
+{
+  "zebra": "last alphabetically",
+  "~meta": {
+    "version": "2.1",
+    "author": "system"
+  },
+  "config": {
+    "timeout": 30,
+    "retries": 3,
+    "endpoint": "https://api.example.com",
+    "debug": false
+  },
+  "apple": "first alphabetically",
+  "users": [
+    {
+      "role": "admin",
+      "name": "Alice",
+      "id": 1
+    },
+    {
+      "role": "viewer",
+      "name": "Bob",
+      "id": 2
+    }
+  ],
+  "mango": "middle"
+}

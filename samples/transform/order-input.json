@@ -1,0 +1,32 @@
+{
+  "orderId": "ORD-12345",
+  "orderDate": "2024-03-15",
+  "customer": {
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "emailAddress": "ALICE.JOHNSON@EXAMPLE.COM",
+    "loyaltyTier": "gold"
+  },
+  "items": [
+    {
+      "sku": "SHOE-001",
+      "productName": "Running Shoes",
+      "qty": 1,
+      "unitPrice": 89.99
+    },
+    {
+      "sku": "SOCK-042",
+      "productName": "Athletic Socks",
+      "qty": 3,
+      "unitPrice": 12.50
+    }
+  ],
+  "shippingAddress": {
+    "street": "123 Main St",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78701"
+  },
+  "internalNotes": "VIP customer - handle with care",
+  "legacySystemId": "SYS-99871"
+}
